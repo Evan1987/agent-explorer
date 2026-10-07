@@ -1,4 +1,4 @@
-"""Core node and flow primitives for pocketflow.
+"""Core node and chap02 primitives for pocketflow.
 
 This module defines the building blocks of a pocketflow pipeline:
 
@@ -25,7 +25,6 @@ from typing import Any, Dict, Iterable, List, Optional
 Shared = Any
 PrepRes = Any
 ExecRes = Any
-PostRes = Any
 Action = Optional[str]
 Params = Dict[str, Any]
 
@@ -276,7 +275,7 @@ class AsyncFlow(Flow, AsyncNode):
 
 
 class AsyncBatchFlow(AsyncFlow, BatchFlow):
-    """Sequential async batch flow."""
+    """Sequential async batch chap02."""
 
     async def _run_async(self, shared: Shared) -> Action:
         pr = await self.prep_async(shared) or []
@@ -286,7 +285,7 @@ class AsyncBatchFlow(AsyncFlow, BatchFlow):
 
 
 class AsyncParallelBatchFlow(AsyncFlow, BatchFlow):
-    """Parallel async batch flow — schedules all items concurrently."""
+    """Parallel async batch chap02 — schedules all items concurrently."""
 
     async def _run_async(self, shared: Shared) -> Action:
         pr = await self.prep_async(shared) or []

@@ -1,6 +1,6 @@
 
 from pocketflow import Flow
-from flow.chain import AddOne, MultiplyByTwo
+from chap02.chain import AddOne, MultiplyByTwo
 
 
 if __name__ == '__main__':
